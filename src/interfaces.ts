@@ -12,6 +12,8 @@ export type ErrolServiceConfiguration = {
 };
 
 export interface ErrolEmailConfiguration {
+  from: string;
+  to: string;
   host: string;
   port: number;
   secure: boolean;

@@ -9,6 +9,7 @@ import {
   ErrolNotification,
   ErrolServiceConfiguration,
 } from "./interfaces";
+import { createTransport } from "nodemailer";
 
 export class Errol {
   constructor(private configuration: ErrolServiceConfiguration[]) {}
@@ -19,5 +20,14 @@ export class Errol {
     }
   }
 
-  private async email(config: ErrolEmailConfiguration, notification: ErrolNotification) {}
+  private async email(config: ErrolEmailConfiguration, notification: ErrolNotification) {
+    const transport = createTransport(config);
+    return transport.sendMail({
+      from: config.from,
+      to: config.to,
+      subject: "Notification",
+      text: notification.text,
+      html: `<p>${notification.text}</p>`,
+    });
+  }
 }
