@@ -1,6 +1,6 @@
 {
   "name": "errol",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Errol delivers your notifications wherever you want them",
   "main": "dist/index.js",
   "scripts": {
