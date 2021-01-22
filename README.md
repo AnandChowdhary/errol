@@ -10,11 +10,46 @@ Errol delivers your notifications wherever you want them. It's a Node.js project
 | PRs | [![PR Generator CI](https://github.com/koj-co/errol/workflows/PR%20Generator%20CI/badge.svg)](https://github.com/koj-co/errol/actions?query=workflow%3A%22PR+Generator+CI%22) [![Merge PRs](https://github.com/koj-co/errol/workflows/Merge%20PRs/badge.svg)](https://github.com/koj-co/errol/actions?query=workflow%3A%22Merge+PRs%22) |
 <!-- prettier-ignore-end -->
 
-## ⭐️ Services
+## ⭐️ Usage
 
-- [ ] Slack
-- [ ] Telegram
-- [ ] Email
+To send a notification to all services:
+
+```ts
+import { Errol, ErrolService } from "errol"; // TypeScript/ESM
+// const { Errol, ErrolService } = require("errol");
+
+const notifications = new Errol([
+  {
+    service: ErrolService.SLACK,
+    token: "your-slack-token",
+    channelId: "your-slack-channel",
+  },
+  {
+    service: ErrolService.TELEGRAM,
+    accessToken: "your-telegram-token",
+    chatId: "your-telegram-chat",
+  },
+  {
+    service: ErrolService.EMAIL,
+    from: "you@example.com",
+    to: "you@example.com",
+    host: "example.com",
+    auth: {
+      user: "you@example.com",
+      pass: "your-password",
+    },
+  },
+]);
+
+// Send a notification
+notifications.send("This is my notification!");
+```
+
+Currently supported services:
+
+- [x] Slack
+- [x] Telegram
+- [x] Email
 - [ ] Twilio SMS
 
 ## 📄 License
