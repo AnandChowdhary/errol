@@ -51,6 +51,7 @@ Currently supported services:
 - [x] Telegram
 - [x] Email
 - [ ] Twilio SMS
+- [ ] Twitter DM/tweet
 
 ## 📄 License
 
