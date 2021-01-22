@@ -5,9 +5,9 @@ This is a starter repository for building Node.js projects at Koj.
 <!-- prettier-ignore-start -->
 |   | Status |
 | - | - |
-| Build | [![Node CI](https://github.com/koj-co/template/workflows/Node%20CI/badge.svg)](https://github.com/koj-co/template/actions?query=workflow%3A%22Node+CI%22) [![Dependencies](https://img.shields.io/librariesio/github/koj-co/template)](https://libraries.io/github/koj-co/template) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/koj-co/template)](https://github.com/koj-co/template/releases) [![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/koj-co/template)](https://snyk.io/test/github/koj-co/template) |
-| Health | [![License CI](https://github.com/koj-co/template/workflows/License%20CI/badge.svg)](https://github.com/koj-co/template/actions?query=workflow%3A%22License+CI%22) [![CLA Assistant](https://github.com/koj-co/template/workflows/CLA%20Assistant/badge.svg)](https://github.com/koj-co/template/actions?query=workflow%3A%22CLA+Assistant%22) [![Pull Request Labeler](https://github.com/koj-co/template/workflows/Pull%20Request%20Labeler/badge.svg)](https://github.com/koj-co/template/actions?query=workflow%3A%22Pull+Request+Labeler%22) |
-| PRs | [![PR Generator CI](https://github.com/koj-co/template/workflows/PR%20Generator%20CI/badge.svg)](https://github.com/koj-co/template/actions?query=workflow%3A%22PR+Generator+CI%22) [![Merge PRs](https://github.com/koj-co/template/workflows/Merge%20PRs/badge.svg)](https://github.com/koj-co/template/actions?query=workflow%3A%22Merge+PRs%22) |
+| Build | [![Node CI](https://github.com/koj-co/errol/workflows/Node%20CI/badge.svg)](https://github.com/koj-co/errol/actions?query=workflow%3A%22Node+CI%22) [![Dependencies](https://img.shields.io/librariesio/github/koj-co/errol)](https://libraries.io/github/koj-co/errol) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/koj-co/errol)](https://github.com/koj-co/errol/releases) [![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/koj-co/errol)](https://snyk.io/test/github/koj-co/errol) |
+| Health | [![License CI](https://github.com/koj-co/errol/workflows/License%20CI/badge.svg)](https://github.com/koj-co/errol/actions?query=workflow%3A%22License+CI%22) [![CLA Assistant](https://github.com/koj-co/errol/workflows/CLA%20Assistant/badge.svg)](https://github.com/koj-co/errol/actions?query=workflow%3A%22CLA+Assistant%22) [![Pull Request Labeler](https://github.com/koj-co/errol/workflows/Pull%20Request%20Labeler/badge.svg)](https://github.com/koj-co/errol/actions?query=workflow%3A%22Pull+Request+Labeler%22) |
+| PRs | [![PR Generator CI](https://github.com/koj-co/errol/workflows/PR%20Generator%20CI/badge.svg)](https://github.com/koj-co/errol/actions?query=workflow%3A%22PR+Generator+CI%22) [![Merge PRs](https://github.com/koj-co/errol/workflows/Merge%20PRs/badge.svg)](https://github.com/koj-co/errol/actions?query=workflow%3A%22Merge+PRs%22) |
 <!-- prettier-ignore-end -->
 
 ## ⭐️ Features
@@ -25,11 +25,11 @@ This is a starter repository for building Node.js projects at Koj.
 
 ## 💻 Getting started
 
-1. [Create a new repository from this template](https://github.com/koj-co/template/generate)
+1. [Create a new repository from this template](https://github.com/koj-co/errol/generate)
 2. Install dependencies using `npm install`
 3. Update package details in `package.json` and `README.md`
-   1. Find and replace `koj-co/template` with `user/repository`
-   2. Find and replace `@koj/template` with npm project name
+   1. Find and replace `koj-co/errol` with `user/repository`
+   2. Find and replace `errol` with npm project name
 
 ## 📄 License
 

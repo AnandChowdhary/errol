@@ -1,44 +1,49 @@
 {
-  "name": "@koj/template",
-  "version": "1.0.11",
-  "description": "Koj's repository template with GitHub Actions CI, releases, and more",
+  "name": "errol",
+  "version": "0.0.0",
+  "description": "Errol delivers your notifications wherever you want them",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "test": "jest",
     "test-watch": "jest --watch",
     "coverage": "jest --coverage",
-    "update-template": "npx update-template https://github.com/koj-co/template",
+    "update-template": "npx update-template https://github.com/koj-co/errol",
     "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/koj-co/template.git"
+    "url": "git+https://github.com/koj-co/errol.git"
   },
   "keywords": [
     "koj",
     "template",
     "nodejs",
-    "typescript"
+    "typescript",
+    "notification",
+    "notifications",
+    "telegram",
+    "slack",
+    "email"
   ],
   "author": "Anand Chowdhary <mail@anandchowdhary.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/koj-co/template/issues"
+    "url": "https://github.com/koj-co/errol/issues"
   },
-  "homepage": "https://github.com/koj-co/template#readme",
+  "homepage": "https://github.com/koj-co/errol#readme",
   "devDependencies": {
     "@koj/config": "1.2.11",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
-    "@semantic-release/github": "^7.1.2",
-    "@semantic-release/npm": "^7.0.8",
-    "@types/jest": "^26.0.15",
+    "@semantic-release/github": "^7.2.0",
+    "@semantic-release/npm": "^7.0.10",
+    "@types/jest": "^26.0.20",
     "jest": "^26.6.3",
-    "semantic-release": "^17.2.3",
+    "semantic-release": "^17.3.6",
     "semantic-release-gitmoji": "^1.3.4",
     "ts-jest": "^26.4.4",
-    "typescript": "^4.0.5",
-    "update-template": "^1.1.2"
+    "typescript": "^4.1.3",
+    "update-template": "^1.3.1"
   }
 }
