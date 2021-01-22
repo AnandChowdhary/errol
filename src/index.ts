@@ -1,9 +1,23 @@
 /**
  * @copyright Koj <https://koj.co>
  * @link https://github.com/koj-co/errol
- *
  */
 
-import { ErrolEmailConfiguration, ErrolNotification } from "./interfaces";
+import {
+  ErrolService,
+  ErrolEmailConfiguration,
+  ErrolNotification,
+  ErrolServiceConfiguration,
+} from "./interfaces";
 
-const sendEmail = async (config: ErrolEmailConfiguration, notification: ErrolNotification) => {};
+export class Errol {
+  constructor(private configuration: ErrolServiceConfiguration[]) {}
+
+  async send(notification: ErrolNotification) {
+    for await (const item of this.configuration) {
+      if (item.service === ErrolService.EMAIL) await this.email(item.config, notification);
+    }
+  }
+
+  private async email(config: ErrolEmailConfiguration, notification: ErrolNotification) {}
+}
