@@ -4,4 +4,6 @@
  *
  */
 
-export const hello = "world";
+import { ErrolEmailConfiguration, ErrolNotification } from "./interfaces";
+
+const sendEmail = async (config: ErrolEmailConfiguration, notification: ErrolNotification) => {};
