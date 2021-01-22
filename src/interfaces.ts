@@ -1,3 +1,8 @@
+/**
+ * @copyright Koj <https://koj.co>
+ * @link https://github.com/koj-co/errol
+ * */
+
 export interface ErrolNotification {
   text: string;
 }
