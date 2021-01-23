@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "@slack/web-api": "^6.0.0",
+    "got": "^11.8.1",
     "messaging-api-telegram": "^1.0.4",
     "nodemailer": "^6.4.17"
   }
