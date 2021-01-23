@@ -10,10 +10,12 @@ import {
   ErrolServiceConfiguration,
   ErrolSlackConfiguration,
   ErrolTelegramConfiguration,
+  ErrolWebhookConfiguration,
 } from "./interfaces";
 import { createTransport } from "nodemailer";
 import { WebClient } from "@slack/web-api";
 import { TelegramClient } from "messaging-api-telegram";
+import got from "got";
 
 export class Errol {
   constructor(private configuration: ErrolServiceConfiguration[]) {}
@@ -24,7 +26,12 @@ export class Errol {
       else if (item.service === ErrolService.SLACK) await this.slack(item.config, notification);
       else if (item.service === ErrolService.TELEGRAM)
         await this.telegram(item.config, notification);
+      else if (item.service === ErrolService.WEBHOOK) await this.webhook(item.config, notification);
     }
+  }
+
+  private async webhook(config: ErrolWebhookConfiguration, notification: ErrolNotification) {
+    return got[config.method](config.url, { json: notification });
   }
 
   private async telegram(config: ErrolTelegramConfiguration, notification: ErrolNotification) {

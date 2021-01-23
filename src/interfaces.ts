@@ -3,6 +3,8 @@
  * @link https://github.com/koj-co/errol
  * */
 
+import { HTTPAlias } from "got/dist/source";
+
 export interface ErrolNotification {
   text: string;
 }
@@ -11,6 +13,7 @@ export enum ErrolService {
   EMAIL,
   SLACK,
   TELEGRAM,
+  WEBHOOK,
 }
 
 export type ErrolServiceConfiguration =
@@ -25,7 +28,16 @@ export type ErrolServiceConfiguration =
   | {
       service: ErrolService.TELEGRAM;
       config: ErrolTelegramConfiguration;
+    }
+  | {
+      service: ErrolService.WEBHOOK;
+      config: ErrolWebhookConfiguration;
     };
+
+export interface ErrolWebhookConfiguration {
+  url: string;
+  method: HTTPAlias;
+}
 
 export interface ErrolTelegramConfiguration {
   accessToken: string;

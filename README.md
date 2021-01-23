@@ -50,6 +50,7 @@ Currently supported services:
 - [x] Slack
 - [x] Telegram
 - [x] Email
+- [x] Webhook
 - [ ] Twilio SMS
 - [ ] Twitter DM/tweet
 
