@@ -29,7 +29,12 @@ export class Errol {
         await this.telegram(item.config, notification);
       else if (item.service === ErrolService.WEBHOOK) await this.webhook(item.config, notification);
       else if (item.service === ErrolService.IFTTT) await this.ifttt(item.config, notification);
+      else if (item.service === ErrolService.LOGGER) await this.logger(undefined, notification);
     }
+  }
+
+  private async logger(_: undefined, notification: ErrolNotification) {
+    console.log(notification);
   }
 
   private async ifttt(config: ErrolIFTTTConfiguration, notification: ErrolNotification) {

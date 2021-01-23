@@ -15,6 +15,7 @@ export enum ErrolService {
   TELEGRAM,
   WEBHOOK,
   IFTTT,
+  LOGGER,
 }
 
 export type ErrolServiceConfiguration =
@@ -37,6 +38,9 @@ export type ErrolServiceConfiguration =
   | {
       service: ErrolService.IFTTT;
       config: ErrolIFTTTConfiguration;
+    }
+  | {
+      service: ErrolService.LOGGER;
     };
 
 export interface ErrolIFTTTConfiguration {
