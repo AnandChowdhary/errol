@@ -51,6 +51,7 @@ Currently supported services:
 - [x] Telegram
 - [x] Email
 - [x] Webhook
+- [x] IFTTT
 - [ ] Twilio SMS
 - [ ] Twitter DM/tweet
 

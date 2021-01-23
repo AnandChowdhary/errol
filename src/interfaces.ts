@@ -14,6 +14,7 @@ export enum ErrolService {
   SLACK,
   TELEGRAM,
   WEBHOOK,
+  IFTTT,
 }
 
 export type ErrolServiceConfiguration =
@@ -32,7 +33,16 @@ export type ErrolServiceConfiguration =
   | {
       service: ErrolService.WEBHOOK;
       config: ErrolWebhookConfiguration;
+    }
+  | {
+      service: ErrolService.IFTTT;
+      config: ErrolIFTTTConfiguration;
     };
+
+export interface ErrolIFTTTConfiguration {
+  event: string;
+  key: string;
+}
 
 export interface ErrolWebhookConfiguration {
   url: string;

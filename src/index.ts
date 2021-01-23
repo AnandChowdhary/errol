@@ -11,6 +11,7 @@ import {
   ErrolSlackConfiguration,
   ErrolTelegramConfiguration,
   ErrolWebhookConfiguration,
+  ErrolIFTTTConfiguration,
 } from "./interfaces";
 import { createTransport } from "nodemailer";
 import { WebClient } from "@slack/web-api";
@@ -27,7 +28,14 @@ export class Errol {
       else if (item.service === ErrolService.TELEGRAM)
         await this.telegram(item.config, notification);
       else if (item.service === ErrolService.WEBHOOK) await this.webhook(item.config, notification);
+      else if (item.service === ErrolService.IFTTT) await this.ifttt(item.config, notification);
     }
+  }
+
+  private async ifttt(config: ErrolIFTTTConfiguration, notification: ErrolNotification) {
+    return got.post(`https://maker.ifttt.com/trigger/${config.event}/with/key/${config.key}`, {
+      json: { value1: notification.text },
+    });
   }
 
   private async webhook(config: ErrolWebhookConfiguration, notification: ErrolNotification) {
